@@ -1,0 +1,72 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.lato-black {
+	font-family: 'Lato', 'Lato-Black';
+}
+
+.lato-light {
+	font-family: 'Lato', 'Lato-Light';
+}
+
+.lato-bold {
+	font-family: 'Lato', 'Lato-Bold';
+}
+
+.lato-regular {
+	font-family: 'Lato', 'Lato-Regular';
+}
+.header {
+	animation: opacity 2s forwards;
+}
+
+.tekst {
+	opacity: 0;
+	animation: opacity 2s forwards;
+	animation-delay: 1s;
+}
+
+.button {
+	opacity: 0;
+	animation: opacity 2s forwards;
+	animation-delay: 2s;
+}
+
+.spinner {
+	animation: spin 1.2s linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.fas {
+	font-family: 'Font Awesome 5 Free', 'fa-solid-900';
+}
+
+.current {
+	@apply bg-red-500;
+}
+
+.current-route {
+	@apply text-red-500;
+}
+.nav-plans {
+	@apply h-[19.5%];
+}
