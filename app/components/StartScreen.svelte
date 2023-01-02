@@ -22,7 +22,7 @@
 				textWrap={true}
 			/>
 			<button
-				class="rounded-3xl bg-red-500 mx-auto text-center px-4 py-2 mt-7 w-3/4 button"
+				class="rounded-3xl bg-sky-600 mx-auto text-center px-4 py-2 mt-7 w-3/4 button"
 				on:tap={startConfig}
 			>
 				<formattedString>

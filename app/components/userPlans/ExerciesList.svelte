@@ -38,7 +38,7 @@
 			class="bg-secound w-full p-4 h-[8%]"
 		>
 			<label text="&#xf060;" class="text-white text-2xl pl-2 fas" on:tap={onBack} />
-			<label text={name} class="text-white text-xl lato text-center" />
+			<label text={name} class="text-white text-xl lato text-center font-light" />
 			<label text="" class="text-white text-xl lato text-center" />
 		</flexBoxLayout>
 		<flexBoxLayout flexDirection="column" alignItems="center" class="space-y-2 p-2">

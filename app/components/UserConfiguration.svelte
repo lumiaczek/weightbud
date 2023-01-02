@@ -42,31 +42,38 @@
 
 	// sprawdzanie danych a następnie
 	const checkBeforeSend = () => {
-		if (personData.name === '') {
+		let status = true;
+		if (personData.name === '' || personData.name.length > 18) {
 			errors.nameError = true;
 			setTimeout(() => {
 				errors.nameError = false;
 			}, 2000);
+			status = false;
 		}
-		if (personData.weight === '') {
+		if (
+			personData.weight === '' ||
+			Number(personData.weight) > 500 ||
+			Number(personData.weight) < 30
+		) {
 			errors.weightError = true;
 			setTimeout(() => {
 				errors.weightError = false;
 			}, 2000);
+			status = false;
 		}
-		if (personData.height === '') {
+		if (
+			personData.height === '' ||
+			Number(personData.height) > 300 ||
+			Number(personData.height) < 50
+		) {
 			errors.heightError = true;
 			setTimeout(() => {
 				errors.heightError = false;
 			}, 2000);
+			status = false;
 		}
 
-		if (
-			personData.name === '' ||
-			personData.weight === '' ||
-			personData.gender === '' ||
-			personData.height === ''
-		) {
+		if (status === false || personData.gender === '') {
 			return;
 		}
 
@@ -142,8 +149,11 @@
 				/>
 				{#if errors.nameError}
 					<stackLayout orientation="horizontal">
-						<label text="&#xf06a" class="mt-1 text-red-500 mx-2 fas" />
-						<label text="Proszę wprowadzić imię" class="mt-0.5 text-red-500" />
+						<label text="&#xf06a" class="mt-1 text-sky-600 mx-2 fas" />
+						<label
+							text="Proszę wprowadzić prawidłowe imię"
+							class="mt-0.5 text-sky-600"
+						/>
 					</stackLayout>
 				{/if}
 			</stackLayout>
@@ -159,8 +169,11 @@
 				/>
 				{#if errors.heightError}
 					<stackLayout orientation="horizontal">
-						<label text="&#xf06a" class="mt-1 text-red-500 mx-2 fas" />
-						<label text="Proszę wprowadzić wzrost" class="mt-0.5 text-red-500" />
+						<label text="&#xf06a" class="mt-1 text-sky-600 mx-2 fas" />
+						<label
+							text="Proszę wprowadzić prawidłowy wzrost"
+							class="mt-0.5 text-sky-600"
+						/>
 					</stackLayout>
 				{/if}
 			</stackLayout>
@@ -176,13 +189,16 @@
 				/>
 				{#if errors.weightError}
 					<stackLayout orientation="horizontal">
-						<label text="&#xf06a" class="mt-1 text-red-500 mx-2 fas" />
-						<label text="Proszę wprowadzić wagę" class="mt-0.5 text-red-500 " />
+						<label text="&#xf06a" class="mt-1 text-sky-600 mx-2 fas" />
+						<label
+							text="Proszę wprowadzić prawidłową wagę"
+							class="mt-0.5 text-sky-600 "
+						/>
 					</stackLayout>
 				{/if}
 			</stackLayout>
 			<button
-				class="rounded-3xl bg-red-500 mx-auto text-center px-4 py-2 my-8 w-3/4"
+				class="rounded-3xl bg-sky-600 mx-auto text-center px-4 py-2 my-8 w-3/4"
 				on:tap={checkBeforeSend}
 			>
 				<formattedString>

@@ -26,6 +26,9 @@
 			name: 'Biceps'
 		},
 		{
+			name: 'Przedramiona'
+		},
+		{
 			name: 'Uda'
 		},
 		{
@@ -57,7 +60,7 @@
 			<label text="&#xf060;" class="text-white pl-2 text-2xl fas" />
 			<label
 				text="Wybierz kategorie"
-				class="text-white text-xl text-center lato mr-4"
+				class="text-white text-xl font-light text-center lato mr-4"
 				on:tap={onBack}
 			/>
 			<label text="" class="text-white text-xl lato text-center" />

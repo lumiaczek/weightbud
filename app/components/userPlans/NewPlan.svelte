@@ -39,7 +39,7 @@
 			userPlans.close();
 			return;
 		}
-		userPlans.createDocument(newPlan, newPlan.name);
+		userPlans.createDocument(newPlan);
 		userPlans.close();
 
 		let obj: Cache = {
@@ -50,8 +50,6 @@
 		planCache.set(obj);
 		navigate({ page: Plans });
 	};
-
-	console.log(newPlan.cwiczenia);
 
 	const gotoCategoryChoose = () => {
 		navigate({ page: CategoryChoose });
@@ -72,7 +70,7 @@
 		>
 			<label text="&#xf060;" class="text-white text-2xl p-2 fas" on:tap={onBack} />
 			<textView
-				class="w-[60%] bg-secound text-center -mt-12 self-end text-xl text-white lato"
+				class="w-[60%] bg-secound text-center -mt-12 self-end text-xl text-white lato font-light"
 				bind:text={$planCache.name}
 			/>
 			<label
@@ -118,7 +116,7 @@
 					</flexBoxLayout>
 				{/each}
 				<button
-					class="rounded-3xl bg-red-500 mx-auto text-center px-4 -mt-10 py-2 w-3/4"
+					class="rounded-3xl bg-sky-600 mx-auto text-center px-4 -mt-10 py-2 w-3/4"
 					on:tap={applyPlan}
 				>
 					<formattedString>

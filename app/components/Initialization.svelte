@@ -18,6 +18,7 @@
 		// połączenie / tworzenie nowych baz danych
 		const userSettings = new CouchBase('userSettings');
 		const exerciseDatabase = new CouchBase('exerciseDatabase');
+		const userWorkouts = new CouchBase('userWorkouts');
 
 		// sprawdzanie ustawień aplikacji czy została ona już zinicjalizowania : To taki gatekeeper przed wstawianiem wielokrotnej ilości takich samych dokumentów do bazy danych
 		if (!hasKey('personDataSetted')) {
@@ -50,6 +51,7 @@
 		//zamknij połączenia
 		userSettings.close();
 		exerciseDatabase.close();
+		userWorkouts.close();
 		return;
 	};
 
@@ -77,6 +79,6 @@
 			class="text-base text-center lato text-white font-light leading-tight"
 			textWrap="true"
 		/>
-		<label text="&#xf013;" class="fas text-6xl mt-4 text-red-500 spinner" />
+		<label text="&#xf013;" class="fas text-6xl mt-4 text-sky-600 spinner" />
 	</flexBoxLayout>
 </page>

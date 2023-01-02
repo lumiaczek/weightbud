@@ -80,7 +80,7 @@
 			class="bg-secound w-full p-4 h-[4rem]"
 		>
 			<label text="&#xf060;" class="text-white text-2xl pl-2 fas" on:tap={onBack} />
-			<label text={cwiczenie.name} class="text-white text-xl lato text-center" />
+			<label text={cwiczenie.name} class="text-white text-xl font-light lato text-center" />
 			<label text="&#xf00c" class="text-white text-2xl pr-2 fas " on:tap={addPlan} />
 		</flexBoxLayout>
 		<stackLayout>
@@ -105,13 +105,13 @@
 							on:tap={addSerie}
 						/>
 					</flexBoxLayout>
-					{#if error}
-						<label
-							text="Ilość serii nie może być większa niż 5"
-							class="lato font-light text-sm text-red-500"
-						/>
-					{/if}
-				</flexBoxLayout></stackLayout
+				</flexBoxLayout>
+				{#if error}
+					<label
+						text="Ilość serii nie może być większa niż 5"
+						class="lato font-light text-center text-sm text-sky-600"
+					/>
+				{/if}</stackLayout
 			>
 
 			<flexBoxLayout flexDirection="column" class="mt-4 space-y-1">
@@ -128,7 +128,7 @@
 						/>
 						<label
 							text="&#xf057"
-							class="text-2xl text-red-500 fas font-semibold ml-2"
+							class="text-2xl text-sky-600 fas font-semibold ml-2"
 							on:tap={() => {
 								deleteSerie(i);
 							}}

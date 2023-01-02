@@ -61,12 +61,28 @@
 }
 
 .current {
-	@apply bg-red-500;
+	@apply bg-sky-600;
 }
 
 .current-route {
-	@apply text-red-500;
+	@apply text-sky-600;
 }
 .nav-plans {
 	@apply h-[19.5%];
+}
+
+.plans-head {
+	@apply h-[13.2%];
+}
+
+.nav-plans {
+	@apply h-[14.9%];
+}
+
+.nav-overview {
+	@apply h-[15.4%];
+}
+
+.button-overview {
+	@apply h-[8%];
 }

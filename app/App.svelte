@@ -7,20 +7,6 @@
 	const userSettings = new CouchBase('userSettings');
 	const exerciseDatabase = new CouchBase('exerciseDatabase');
 
-	console.log(
-		userSettings.query({
-			select: [],
-			from: ''
-		})
-	);
-
-	console.log(
-		exerciseDatabase.query({
-			select: [],
-			from: ''
-		})
-	);
-
 	userSettings.close();
 	exerciseDatabase.close();
 
