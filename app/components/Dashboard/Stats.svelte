@@ -181,20 +181,19 @@
 		</flexBoxLayout>
 		<flexBoxLayout
 			flexDirection="column"
-			class="w-full -mt-12 mx-4 h-[26%] rounded-xl bg-secound"
+			class="w-full -mt-12 mx-4 h-[28%] rounded-xl bg-secound"
 		>
-			<flexBoxLayout
-				flexDirection="row"
-				justifyContent="center"
-				class="px-4 rounded-t-3xl bg-secound pt-3 w-full"
-			/>
-			<label text="Statystyki trójboju" class="ml-3 lato text-grayText text-lg" />
 			<flexBoxLayout
 				flexDirection="column"
 				justifyContent="center"
 				alignItems="center"
 				class="p-2"
 			>
+				<label
+					text="Statystyki trójboju"
+					class="ml-3 lato text-grayText text-lg self-start mb-2"
+				/>
+
 				<label text="Wyciskanie na klate" class="lato text-white text-lg" />
 				<label text={`${benchPress} kg`} class="lato text-sky-600  text-lg" />
 				<label text="Przysiad" class="lato text-white text-lg" />
@@ -205,7 +204,7 @@
 		</flexBoxLayout>
 
 		<button
-			class="w-[80%] h-[10%] bg-sky-600 rounded-3xl text-center mx-5 p-5"
+			class="w-[80%] h-[10%] bg-sky-600 rounded-3xl -mt-6 text-center mx-5 p-5"
 			on:tap={gotoArchive}
 		>
 			<formattedString>
@@ -214,7 +213,7 @@
 					class="text-white lato text-2xl font-normal"
 				/>
 			</formattedString>
-		</button>
+		</button>flexBoxLayout
 
 		<flexboxLayout
 			flexDirection="row"

@@ -156,12 +156,12 @@
 			<label text="&#xf013;" class="fas text-3xl text-white" on:tap={openSettings} />
 		</flexBoxLayout>
 
-		<flexBoxLayout flexDirection="column" class="w-full mx-4 h-[19%] rounded-xl bg-secound">
-			<flexBoxLayout
-				flexDirection="row"
-				justifyContent="center"
-				class="px-4 rounded-t-3xl bg-secound pt-3 w-full"
-			/>
+		<flexBoxLayout
+			flexDirection="column"
+			class="w-full mx-4 h-[21%] rounded-xl bg-secound"
+			justifyContent="center"
+			alignItems="center"
+		>
 			<flexBoxLayout flexDirection="column" justifyContent="center" alignItems="center">
 				<flexBoxLayout
 					flexDirection="column"

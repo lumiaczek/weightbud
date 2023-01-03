@@ -27,9 +27,7 @@
 					name: name,
 					gender: gender,
 					weight: weight,
-					height: height,
-					weightArchive: [],
-					weightDates: []
+					height: height
 				},
 				'personData'
 			);
