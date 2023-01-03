@@ -1,7 +1,7 @@
 {
 	"name": "weightbud",
 	"main": "app/app.ts",
-	"version": "0.9.9-pre.release",
+	"version": "1.0.0.",
 	"private": true,
 	"dependencies": {
 		"@nativescript/auto-fit-text": "^1.0.3",
